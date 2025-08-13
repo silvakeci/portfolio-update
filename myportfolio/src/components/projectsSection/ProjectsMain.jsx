@@ -23,10 +23,10 @@ const projects = [
     link: "https://apps.apple.com/pt/app/jogos-santa-casa/id1053989140",
   },
   {
-    name: "Bank of Luck",
+    name: "Placard App",
     align: "left",
-    image: "../../images/website-img-4.jpg",
-    link: "#",
+    image: "../../images/web-4.png",
+    link: "https://apps.apple.com/pt/app/placard/id1015430906",
   },
 ];
 

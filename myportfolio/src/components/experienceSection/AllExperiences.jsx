@@ -4,37 +4,40 @@ import { motion } from "framer-motion";
 import { fadeIn } from "../../framerMotion/variants";
 
 const experiences = [
+   {
+    job: "Full-Stack Developer (Internship)",
+    company: "Elite Academy",
+    date: "04/2021 -06/2021",
+    responsibilities: [
+      "C# programming language with the .NET Framework.",
+      "MySQL Database.",
+      "Git version control.",
+      "React.js for developing interactive front-end applications."
+    ],
+  },
+  {
+    job: "Back-End Developer",
+    company: "Intesa Sanapolo Bank Albania",
+    date: "11/2021 - 02/2022",
+    responsibilities: [
+      "Developed Spring Boot backend services in Java.",
+      "Managed MySQL databases.",
+      "Built React.js front-end apps.",
+      "Used Git for version control.",
+    ],
+  },
   {
     job: "Front-End Developer",
-    company: "Alex Apps",
-    date: "2022 - Present",
+    company: "Jogos Santacasa",
+    date: "02/2022 - Present",
     responsibilities: [
-      "Implementing reusable components.",
-      "Participating in large scale application.",
-      "Working on the performance of web applications.",
-      "Generating new ideas for better user experience.",
+      "Developed React.js & React Native apps.",
+      "Wrote JavaScript/TypeScript code.",
+      "Styled UIs with Tailwind, MUI, HTML, CSS.",
+      "Handled state (Redux/Context) & API calls (Axios).",
     ],
   },
-  {
-    job: "Course Instructor",
-    company: "Nucamp",
-    date: "2023 - Present",
-    responsibilities: [
-      "Explaining and facilitating web development concepts.",
-      "Help students with their assignments and grade them weekly.",
-      "Provide support for students through their learning journey.",
-    ],
-  },
-  {
-    job: "Course Instructor",
-    company: "Sprints",
-    date: "2024 - Present",
-    responsibilities: [
-      "Teaching JavaScript, React and TailwindCSS.",
-      "Participating in preparing course materials.",
-      "Helping students through their way in learning web development technologies.",
-    ],
-  },
+ 
 ];
 
 const AllExperiences = () => {
