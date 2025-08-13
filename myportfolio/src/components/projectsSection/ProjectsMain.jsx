@@ -5,29 +5,25 @@ import { fadeIn } from "../../framerMotion/variants";
 
 const projects = [
   {
-    name: "Vacation of Africa",
-    year: "Mar2022",
+    name: "Jogos Santacasa",
     align: "right",
-    image: "../../images/website-img-1.jpg",
-    link: "#",
+    image: "../../images/web-1.png",
+    link: "https://www.jogossantacasa.pt/",
   },
   {
-    name: "Moola App",
-    year: "Sept2022",
+    name: "Placard",
     align: "left",
-    image: "../../images/website-img-2.webp",
-    link: "#",
+    image: "../../images/web2.png",
+    link: "https://placard.jogossantacasa.pt/PlacardWeb/",
   },
   {
-    name: "Tourzania",
-    year: "Jan2023",
+    name: "Jogos Santacasa App",
     align: "right",
-    image: "../../images/website-img-3.jpg",
-    link: "#",
+    image: "../../images/web3.png",
+    link: "https://apps.apple.com/pt/app/jogos-santa-casa/id1053989140",
   },
   {
     name: "Bank of Luck",
-    year: "May2024",
     align: "left",
     image: "../../images/website-img-4.jpg",
     link: "#",
@@ -51,9 +47,9 @@ const ProjectsMain = () => {
             <SingleProject
               key={index}
               name={project.name}
-              year={project.year}
               align={project.align}
               image={project.image}
+              link={project.link}
             />
           );
         })}
