@@ -6,42 +6,43 @@ const ContactForm = () => {
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
   const [success, setSuccess] = useState("");
-  const handleName = (e) => {
-    setName(e.target.value);
-  };
-  const handleEmail = (e) => {
-    setEmail(e.target.value);
-  };
-  const handleMessage = (e) => {
-    setMessage(e.target.value);
-  };
   const form = useRef();
+
+  const handleName = (e) => setName(e.target.value);
+  const handleEmail = (e) => setEmail(e.target.value);
+  const handleMessage = (e) => setMessage(e.target.value);
+
   const sendEmail = (e) => {
     e.preventDefault();
+
     emailjs
-      .sendForm("service_ko3hmpt", "template_ahbmmqd", form.current, {
-        publicKey: "I6HAT5mUZH7WHabGE",
-      })
+      .sendForm(
+        "service_s7rg1p3",      
+        "template_fbaxnk4",     
+        form.current,
+        "kurRfd_ffsl-Bfcml"     
+      )
       .then(
         () => {
-          setEmail("");
           setName("");
+          setEmail("");
           setMessage("");
-          setSuccess("Message Sent Succesfully");
+          setSuccess("✅ Message Sent Successfully!");
         },
         (error) => {
-          console.log("FAILED...", error.text);
+          console.error("FAILED...", error.text);
+          setSuccess("❌ Failed to send message. Please try again.");
         }
       );
   };
 
   return (
     <div>
-      <p className="text-cyan">{success}</p>
+      {success && <p className="text-cyan">{success}</p>}
       <form ref={form} onSubmit={sendEmail} className="flex flex-col gap-4">
         <input
           type="text"
-          name="from_name"
+          name="from_name"      
           placeholder="Your Name"
           required
           className="h-12 rounded-lg bg-lightBrown px-2"
@@ -50,7 +51,7 @@ const ContactForm = () => {
         />
         <input
           type="email"
-          name="from_email"
+          name="from_email"    
           placeholder="Your Email"
           required
           className="h-12 rounded-lg bg-lightBrown px-2"
@@ -58,13 +59,12 @@ const ContactForm = () => {
           onChange={handleEmail}
         />
         <textarea
-          type="text"
-          name="message"
+          name="message"      
           rows="9"
           cols="50"
           placeholder="Message"
           required
-          className=" rounded-lg bg-lightBrown p-2"
+          className="rounded-lg bg-lightBrown p-2"
           value={message}
           onChange={handleMessage}
         />
